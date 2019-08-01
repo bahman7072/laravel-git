@@ -252,6 +252,7 @@
 //Form Routes
 
 
+use Illuminate\Support\Facades\App;
 
 Auth::routes(['verify' => true]);
 
@@ -269,4 +270,11 @@ Route::get('/admin', function (){
 })->middleware('isAdmin:مدیر');
 
 
-//Bahman
+//Fa Lang
+Route::prefix('fa')->group(function (){
+    App::setLocale('fa');
+    Route::get('message', function (){
+        return view('message');
+    });
+});
+
