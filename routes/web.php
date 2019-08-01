@@ -267,3 +267,6 @@ Route::middleware(['auth', 'verified'])->group(function (){
 Route::get('/admin', function (){
     echo 'Hello Admin';
 })->middleware('isAdmin:مدیر');
+
+
+//Bahman
